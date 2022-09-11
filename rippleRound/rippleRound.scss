@@ -29,6 +29,7 @@ body{
     top: -5px;
     border: 5px solid;
     border-color: var(--color);
+    animation: round 10s cubic-bezier(.26,.86,.8,1) forwards;
   }
 }
 
@@ -45,12 +46,19 @@ body{
     width: 90px;
     height: 90px;
     opacity: 1;
+    border-radius: 0%;
   }
   100%{
     width: 100vw;
     height: 100vw;
     opacity: 0;
+    border-radius: 100%;
   }
+}
+
+@keyframes round {
+  from {border-radius: 0%;}
+  to {border-radius: 100%;} 
 }
 
 a{
