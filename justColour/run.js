@@ -1,6 +1,10 @@
+let channels = ['lbx0'];
+
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('channel')) channels = [urlParams.get('channel')];
 
 const client = new tmi.Client({
-  channels: ['lbx0']
+  channels: channels
 });
 
 client.on("connected", () => console.log('Reading from Twitch! ✅'));
