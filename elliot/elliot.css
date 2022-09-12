@@ -71,8 +71,8 @@ body {
 }
 @-webkit-keyframes ripple {
   0% {
-    width: 90px;
-    height: 90px;
+    width: 0px;
+    height: 0px;
     opacity: 1;
   }
   100% {
@@ -83,8 +83,8 @@ body {
 }
 @keyframes ripple {
   0% {
-    width: 90px;
-    height: 90px;
+    width: 0px;
+    height: 0px;
     opacity: 1;
   }
   100% {
