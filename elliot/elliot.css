@@ -20,8 +20,8 @@ body {
   padding: 0;
   position: absolute;
   z-index: -1;
-  -webkit-animation: ripple 5s ease-in-out forwards;
-          animation: ripple 5s ease-in-out forwards;
+  -webkit-animation: ripple 7s ease-in-out forwards;
+          animation: ripple 7s ease-in-out forwards;
 }
 .ripple div {
   width: 100%;
@@ -38,6 +38,12 @@ body {
   height: var(--size);
   z-index: 1;
   position: absolute;
+  -webkit-animation: rotating 20s linear infinite;
+          animation: rotating 20s linear infinite;
+}
+
+.rippleStar {
+  z-index: -1;
   -webkit-animation: rotating 20s linear infinite;
           animation: rotating 20s linear infinite;
 }
@@ -66,8 +72,8 @@ body {
     opacity: 1;
   }
   100% {
-    width: 100vw;
-    height: 100vw;
+    width: 150vw;
+    height: 150vw;
     opacity: 0;
   }
 }
@@ -78,8 +84,8 @@ body {
     opacity: 1;
   }
   100% {
-    width: 100vw;
-    height: 100vw;
+    width: 150vw;
+    height: 150vw;
     opacity: 0;
   }
 }
