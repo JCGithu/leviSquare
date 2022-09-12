@@ -40,6 +40,10 @@ body{
   animation: rotating 20s linear infinite;
 }
 
+#star{
+  transition: 1s all ease-in-out;
+}
+
 .rippleStar{
   z-index: -1;
   animation: rotating 20s linear infinite;
