@@ -1,0 +1,95 @@
+body{
+  --size: 100px;
+  --time: 5s
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.ripple{
+  --color: red;
+  width: 90px;
+  height: 90px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: -1;
+  animation: ripple 5s ease-in-out forwards;
+  div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    //border: 5px solid;
+    border-color: var(--color);
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    filter: invert(51%) sepia(84%) saturate(2447%) hue-rotate(83deg) brightness(123%) contrast(121%) drop-shadow(0px 0px 10px var(--color));
+    filter: url(#outliner);
+    fill: deepPink;
+    //filter: url(#outline_selected);
+    //box-shadow: 0px 0px 0px 5px #000000;
+    flood-color: deepPink !important;
+  }
+}
+
+svg{
+  flood-color: deepPink !important;
+}
+
+#outline-color{
+  flood-color: var(--color) !important;
+}
+
+#square{
+  background-color: rgba(255, 255, 255, 0);
+  width: var(--size);
+  height: var(--size);
+  z-index: 1;
+  position: absolute;
+}
+
+#emote{
+  width: var(--size);
+  height: var(--size);
+}
+
+@keyframes ripple {
+  0%{
+    width: 90px;
+    height: 90px;
+    opacity: 1;
+  }
+  100%{
+    width: 100vw;
+    height: 100vw;
+    opacity: 0;
+  }
+}
+
+a{
+  text-decoration: none;
+  color: burlywood;
+
+}
+
+.menu{
+  padding: 2rem;
+  *{
+  transition: all 0.5s ease-in-out;
+    transform: scale(1);
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+}

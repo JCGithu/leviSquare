@@ -41,5 +41,5 @@ client.on('message', (channel, tags, message, self) => {
   document.body.appendChild(ripple);
   setTimeout(()=>{
     document.body.removeChild(ripple)
-  }, 8000);
+  }, 7000);
 });
