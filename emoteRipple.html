@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LeviSquare</title>
+  <script src="tmi.min.js"></script>
+  <link rel="stylesheet" href="emote/emote.css">
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="300" height="300" xlink="http://www.w3.org/1999/xlink"
+    style="position: relative; overflow: hidden; left: 0px; top: 0px;">
+    <defs>
+      <filter id="outliner">
+
+        <!-- Start by grabbing the alpha channel of the text and dilating it-->
+        <feFlood id="outline-color" flood-color="green" result='base' />
+        <feMorphology operator="dilate" radius="8" in="SourceGraphic" result="THICKNESS" />
+        <feComposite result="final" in="base" in2="THICKNESS" operator="in" />
+        <!-- Next, grab the original text (SourceGraphic) and use it to cut out the inside of the dilated text -->
+        <feComposite operator="out" in="final" in2="SourceGraphic"></feComposite>
+
+      </filter>
+    </defs>
+  </svg>
+  <script src="./emoteRipple/run.js"></script>
+</body>
+
+</html>
